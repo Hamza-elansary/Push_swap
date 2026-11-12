@@ -62,7 +62,9 @@ void	test_stack(void)
 }
 void 	push_swap(int argc, char **argv)
 {
-	/*if (ft_comp(argv[1],"--simple"))
+	int i = argc;
+/*
+	if (ft_comp(argv[1],"--simple"))
 		ft_printf("simple : OK");
 	else if (ft_comp(argv[1], "--medium"))
 		ft_printf("medium : OK");
@@ -72,6 +74,16 @@ void 	push_swap(int argc, char **argv)
 		ft_printf("adaptive : OK");
 	else
 		ft_printf("Error.:");
-	*/
-	test_stack();
+*/
+	i++;
+	if (ft_comp(argv[1],"--simple"))
+		test_stack();	
+	else if (ft_comp(argv[1], "--medium"))
+		test_stack();	
+	else if (ft_comp(argv[1], "--complex"))
+		test_stack();	
+	else if (ft_comp(argv[1], "--adaptive"))
+		test_stack();
+	else
+		test_stack();
 }

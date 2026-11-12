@@ -1,6 +1,8 @@
 #include "push_swap.h"
 
-int main (int arc,  char **argv)
+int main (int argc, char **argv)
 {
-	push_swap(arc, argv);
+	if (argc < 2)
+		return 1;
+	push_swap(argc, argv);
 }

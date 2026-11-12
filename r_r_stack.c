@@ -3,9 +3,7 @@
 void	r_r_stack(lst_node **lst)
 {
 	int		size;
-	lst_node	*end_list;
 	lst_node	*tmp;
-	lst_node	*save_node;
 	if (!lst)
 		return;
 	size = size_stack(*lst);
