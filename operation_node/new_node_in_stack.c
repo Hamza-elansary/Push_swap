@@ -6,7 +6,7 @@
 /*   By: hael-ans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 14:40:59 by hael-ans          #+#    #+#             */
-/*   Updated: 2026/11/19 14:42:33 by hael-ans         ###   ########.fr       */
+/*   Updated: 2026/11/25 15:42:40 by hael-ans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../main/push_swap.h"
@@ -19,7 +19,7 @@ lst_node	*new_node(int content)
 	if (!node)
 		return (NULL);
 	node->content = content;
-	node->count = 0;
+	node->indext = 0;
 	//remove memset
 	memset(&node->operation, 0, 44);
 	node->next = NULL;

@@ -6,9 +6,10 @@
 /*   By: hael-ans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 17:44:36 by hael-ans          #+#    #+#             */
-/*   Updated: 2026/11/24 17:55:32 by hael-ans         ###   ########.fr       */
+/*   Updated: 2026/11/26 21:21:25 by hael-ans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "main/push_swap.h"
 
 int	disorder(lst_node *stack_a)
 {
@@ -30,7 +31,7 @@ int	disorder(lst_node *stack_a)
 		}
 		stack_a = stack_a->next;
 	}
-	if (tota_pairs > 2)
+	if (total_pairs == 0)
 		return (0);
 	return ((mistakes * 100) / total_pairs);
 }

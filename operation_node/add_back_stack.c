@@ -6,7 +6,7 @@
 /*   By: hael-ans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 14:32:35 by hael-ans          #+#    #+#             */
-/*   Updated: 2026/11/19 14:36:27 by hael-ans         ###   ########.fr       */
+/*   Updated: 2026/11/25 15:44:28 by hael-ans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../main/push_swap.h"
@@ -22,12 +22,14 @@ void	add_back_stack(lst_node **lst, lst_node *new)
 	{
 		new->next = NULL;
 		new->rev = NULL;
+		new->indext = 0;
 		*lst = new;
 	}
 	else
 	{
 		end_list->next = new;
 		new->rev = end_list;
+		new->indext = end_list->indext + 1;
 		new->next = NULL;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: hael-ans <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 15:40:27 by hael-ans          #+#    #+#             */
-/*   Updated: 2026/11/24 16:33:22 by hael-ans         ###   ########.fr       */
+/*   Updated: 2026/11/27 18:04:58 by hael-ans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -45,7 +45,7 @@ int check_bench(char **str)
 	i = 1;
 	while (str[i])
 	{
-		if (ft_comp(str[i], "--bensh") == 1)
+		if (ft_comp(str[i], "--bench") == 1) //bench
 			res	+= 16;
 		i++;
 	}
@@ -53,7 +53,7 @@ int check_bench(char **str)
 		return  0;
 	return res;
 }
-int	check_input(int argc, char **str, lst_node **stack_a)
+int	check_input(int argc, char **str, lst_node **stack_a, lst_node **stack_b)
 {
 	int	res;
 	
@@ -65,16 +65,14 @@ int	check_input(int argc, char **str, lst_node **stack_a)
 	if (res == 0)
 		return (0);
 	if (res == 1)
-		ft_printf("simple OK\n");
+		selection(stack_a,stack_b);
 	else if (res == 2)
-		ft_printf("medium OK\n");
+		ft_printf("%s\n","medium OK");
 	else if (res == 4)
-		ft_printf ("complex OK\n");
+		ft_printf ("%s\n","complex OK");
 	else if (res == 8)
-		ft_printf ("adaptive OK\n");
+		ft_printf("adaptive OK\n");
 	if (check_bench(str) == 16)
-		ft_printf("bench OK");
-
-
+		bench(*stack_a, res);
 	return 1;
 }
